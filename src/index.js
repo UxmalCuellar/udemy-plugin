@@ -1,1 +1,1 @@
-console.log('It\'s Rick James bitch!!');
+console.log('test message');
