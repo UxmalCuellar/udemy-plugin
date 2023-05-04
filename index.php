@@ -1,4 +1,5 @@
-/*
+<?php
+/**
  * Plugin Name:       Udemy plus
  * Plugin URI:        https://udemy.com
  * Description:       A plugin for adding blocks to a theme

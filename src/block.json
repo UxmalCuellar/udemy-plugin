@@ -5,9 +5,14 @@
   "title": "Fancy Header",
   "category": "text",
   "icon": "star-filled",
-  "description": "as a header with a hover effect",
+  "description": "Adds a header with a hover effect",
   "keywords": ["header", "underline", "hover"],
   "version": "1",
   "textdomain": "udemy-plus",
-  "editorScript": "file:./index.js"
+  "editorScript": "file:./index.js",
+  "attributes": {
+    "content": {
+      "type": "string"
+    }
+  }
 }
