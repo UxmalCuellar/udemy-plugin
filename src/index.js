@@ -1,7 +1,7 @@
 import { registerBlockType } from '@wordpress/blocks'
 import { RichText, useBlockProps, InspectorControls } from '@wordpress/block-editor'
 import { __ } from '@wordpress/i18n'
-import { PanelBody } from '@wordpress/components'
+import { PanelBody, ColorPalette } from '@wordpress/components'
 import block from './block.json'
 import './main.css'
 
@@ -22,7 +22,6 @@ registerBlockType(block.name, {
                             value={underline_color}
                             onChange={newVal => setAttributes({ underline_color: newVal })}
                         />
-
                     </PanelBody>
                 </InspectorControls>
                 <div {...blockProps}>
@@ -39,9 +38,15 @@ registerBlockType(block.name, {
         )
     },
     save({ attributes }) {
-        const { content } = attributes
+        const { content, underline_color } = attributes
         const blockProps = useBlockProps.save({
-            className: 'fancy-header'
+            className: 'fancy-header',
+            style: {
+                'background-image': `
+                    linear-gradient(transparent, transparent),
+                    linear-gradient(${underline_color}, ${underline_color});
+                `
+            }
         })
         return (
             <RichText.Content
