@@ -55,6 +55,5 @@ registerBlockType(block.name, {
                 value={content}
             />
         )
-    
     }
 })
